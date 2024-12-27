@@ -24,7 +24,7 @@
   </view>
 </template>
 
-<script setup lang="ts">
+<script setup>
 // #ifdef MP-WEIXIN
 import { useShare } from '@/hooks';
 // #endif
@@ -41,7 +41,7 @@ onShareAppMessage();
 onShareTimeline();
 // #endif
 
-const title = ref<string>();
+const title = ref();
 title.value = import.meta.env.VITE_APP_TITLE;
 
 const showAgreePrivacy = ref(false);
